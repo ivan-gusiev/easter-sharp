@@ -34,7 +34,9 @@ module Views =
             body [] content
         ]
     
-    let encodeYear (x : int) = a [ _href (String.Format ("/{0}", x)) ] [ x.ToString() |> encodedText ]
+    let encodeYear (x : int) = 
+        let str = x.ToString(System.Globalization.CultureInfo.InvariantCulture)
+        a [ str |> _href ] [ str |> encodedText ]
 
     let encodeDay (x : DateTime) = x.ToString("MMMM dd") |> encodedText
 
