@@ -29,6 +29,7 @@ module Views =
                 link [ _rel  "stylesheet"
                        _type "text/css"
                        _href "main.css" ]
+                script [ _src "script.js"; _async ] []
             ]
             body [] content
         ]
