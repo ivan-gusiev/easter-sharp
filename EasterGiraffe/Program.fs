@@ -28,7 +28,7 @@ module Views =
                 title []  [ encodedText "EasterGiraffe" ]
                 link [ _rel  "stylesheet"
                        _type "text/css"
-                       _href "/main.css" ]
+                       _href "main.css" ]
             ]
             body [] content
         ]
